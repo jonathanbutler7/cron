@@ -1,7 +1,7 @@
 const cron = require('node-cron');
 const shell = require('shelljs');
 
-cron.schedule('* * * * * *', () => {
+cron.schedule('1 * * * * *', () => {
     // each asterisk is minutes, hours, day of month, month, day of week
   console.log('Scheduler running...');
   if (shell.exec('node sayHello.js').code !== 0) {

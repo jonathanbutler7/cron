@@ -1,4 +1,8 @@
-function sayHello() {
-    console.log('hello')
-    return 'hello'
+function printTime() {
+  const time = new Date();
+  const hours = time.getHours();
+  const min = time.getMinutes();
+  const sec = time.getSeconds();
+  console.log(`${hours}:${min}:${sec}`);
 }
+printTime();
