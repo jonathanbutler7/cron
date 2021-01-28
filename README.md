@@ -1,6 +1,6 @@
 # What is this?
 
-This is a project I built with `[puppeteer]`(https://pptr.dev/) and `[node-cron]`(https://github.com/node-cron/node-cron). 
+This is a project I built with [`puppeteer`](https://pptr.dev/) and [`node-cron`](https://github.com/node-cron/node-cron). 
 
 This cron job pings my portfolio websites every 20 minutes. 
 
