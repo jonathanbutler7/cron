@@ -5,17 +5,21 @@ function printTime() {
   return `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
 }
 
+function getTitle(url) {
+  return url.slice(8, url.indexOf('.herokuapp'));
+}
+
 async function pingDashboard(url) {
+  const title = getTitle(url);
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(url);
-  let title = url.slice(8, url.indexOf('.herokuapp'));
   await page.screenshot({ path: `./screenshots/${title}-${printTime()}.png` });
   await browser.close();
 }
 
 async function pingNoteful(url) {
-  let title = url.slice(8, url.indexOf('.herokuapp'));
+  const title = getTitle(url);
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(url);
